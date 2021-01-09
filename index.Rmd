@@ -1,0 +1,42 @@
+---
+title: "Bruno Vidigal"
+image: "bruno.jpg"
+links:
+  - label: LinkedIn
+    url: "https://www.linkedin.com/in/bruno-vidigal/"
+  - label: Twitter
+    url: "https://twitter.com/vidigal_br"
+  - label: GitHub
+    url: "https://github.com/vidigal88"
+  - label: Email
+    url: "caetano.vidigal@email.com"
+site: distill::distill_website
+output:
+  postcards::trestles
+---
+ 
+## Bio
+
+Bruno Vidigal is a statistician at [Food and Agriculture Organization (FAO) of the United Nations](http://www.fao.org/home/en/) in Rome, Italy. His work at FAO consists mainly of creating R plugins (internal API's) to be worked inside the corporate Statistical Working System. He is passionate about statistics, data visualization, R and football/soccer analytics. In his free time he likes to go biking and running. He's just started learning French and playing ukulele.
+
+## Education
+
+**[Universidade Federal de Viçosa](https://www.ufv.br/)** | Viçosa, Brazil
+
+Master's degree in Applied Statistics and Biometry | March 2011 - February 2013
+
+**[Universidade Federal de Juiz de Fora](https://www2.ufjf.br/ufjf/)** | Juiz de Fora, Brazil
+
+B.S. in Statistics | March 2007 - December 2010
+
+## Experience
+
+**[Food and Agriculture Organization of the United Nations]((http://www.fao.org/home/en/))** | Statistician | September 2015 - Present
+
+**[Neoway](https://www.neoway.com.br/)** | Data Scientist | April 2015 - August 2015
+
+**[C&A Modas Brazil](https://www.cea.com.br/)** | Data Analyst | December 2013 - March 2015
+
+**[Hyperativa](https://www.hyperativa.com.br/)** | Data Analyst | March 2013 - November 2013
+
+
