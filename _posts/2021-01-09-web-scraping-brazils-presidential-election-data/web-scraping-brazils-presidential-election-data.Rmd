@@ -1,9 +1,10 @@
 ---
 title: "Web Scraping Brazil's Presidential Election Data"
 description: |
-  A short description of the post.
+  This post shows how to scrape Brazil's Presidential Election Data from TSE.
 author:
   - name: Bruno Vidigal
+  
 date: 2021-01-09
 output:
   distill::distill_article:
