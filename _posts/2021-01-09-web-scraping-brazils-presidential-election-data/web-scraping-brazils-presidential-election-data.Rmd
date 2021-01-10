@@ -7,6 +7,8 @@ author:
 date: 2021-01-09
 output:
   distill::distill_article:
+    toc: true
+    toc_depth: 3
     self_contained: false
 ---
 
@@ -19,7 +21,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 I won't lie to you. The very first time I downloaded elections data from the [Tribunal Superior Eleitoral TSE](https://www.tse.jus.br/eleicoes/eleicoes-2018/votacao-e-resultados/boltim_urna_2_turno) was manually ... and painful. 
 
-28 zip files to download and unzip ... MANUALLY!
+28 files to download and unzip ... MANUALLY!
 
 But it was also clear to me that this procedure wasn't the most recommended. I should figure out a better way to do that.
 
@@ -44,7 +46,7 @@ With this valuable info, I needed to:
 
 # View page source
 
-In order to find the downloadable link, see the gif below or check this [youtube video](https://www.youtube.com/watch?v=TcWhMbY9d88&feature=youtu.be) as the quality is better. The tip is to look for the downloadable link right clicking on the _View page source_ button.
+In order to find the downloadable link, see the gif below or check this [youtube video](https://www.youtube.com/watch?v=TcWhMbY9d88&feature=youtu.be) as the resolution is higher. The tip is to look for the downloadable link right clicking on the _View page source_ button.
 
 
 ```{r gif1, echo=FALSE, out.width="140%", fig.align="center", fig.show='hold'}
@@ -100,7 +102,7 @@ for(i in seq_along(zip_files)) {
 
 ## Read in data
 
-As we are lazy (or should I say smart enough), let's list all data at once with the function `list.files()`
+As we are lazy (or should I say smart enough), let's list all data at once with the function `list.files()`.
 
 ```{r list_files, include=TRUE}
 

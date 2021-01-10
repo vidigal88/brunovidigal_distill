@@ -17,7 +17,7 @@ output:
  
 ## Bio
 
-Bruno Vidigal is a statistician at [Food and Agriculture Organization (FAO) of the United Nations](http://www.fao.org/home/en/) in Rome, Italy. His work at FAO consists mainly of creating R plugins (internal API's) to be worked inside the corporate Statistical Working System. He is passionate about statistics, data visualization, R and football/soccer analytics. In his free time he likes to go biking and running. He's just started learning French and playing ukulele.
+Bruno Vidigal is a statistician at [Food and Agriculture Organization (FAO) of the United Nations](http://www.fao.org/home/en/) in Rome, Italy. His work at FAO consists mainly of creating R plugins (internal API's) to be worked inside the corporate Statistical Working System. He is passionate about statistics, data visualization, R and football/soccer analytics. In his free time he likes to go biking and running. He's just started learning French.
 
 ## Education
 
