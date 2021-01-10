@@ -116,7 +116,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["web-scraping-brazils-presidential-election-data_files/anchor-4.2.2/anchor.min.js","web-scraping-brazils-presidential-election-data_files/bowser-1.9.3/bowser.min.js","web-scraping-brazils-presidential-election-data_files/distill-2.2.21/template.v2.js","web-scraping-brazils-presidential-election-data_files/jquery-1.11.3/jquery.min.js","web-scraping-brazils-presidential-election-data_files/popper-2.6.0/popper.min.js","web-scraping-brazils-presidential-election-data_files/tippy-6.2.7/tippy-bundle.umd.min.js","web-scraping-brazils-presidential-election-data_files/tippy-6.2.7/tippy.css","web-scraping-brazils-presidential-election-data_files/tippy-6.2.7/tippy-light-border.css","web-scraping-brazils-presidential-election-data_files/tippy-6.2.7/tippy.umd.min.js","web-scraping-brazils-presidential-election-data_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["data/elections_2018/bweb_2t_AC_301020181744.csv","data/elections_2018/bweb_2t_AL_301020181745.csv","data/elections_2018/bweb_2t_AM_301020181745.csv","data/elections_2018/bweb_2t_AP_301020181746.csv","data/elections_2018/bweb_2t_BA_301020181746.csv","data/elections_2018/bweb_2t_CE_301020181747.csv","data/elections_2018/bweb_2t_DF_301020181747.csv","data/elections_2018/bweb_2t_ES_301020181748.csv","data/elections_2018/bweb_2t_GO_301020181748.csv","data/elections_2018/bweb_2t_MA_301020181749.csv","data/elections_2018/bweb_2t_MG_301020181749.csv","data/elections_2018/bweb_2t_MS_301020181750.csv","data/elections_2018/bweb_2t_MT_301020181750.csv","data/elections_2018/bweb_2t_PA_301020181751.csv","data/elections_2018/bweb_2t_PB_301020181751.csv","data/elections_2018/bweb_2t_PE_301020181752.csv","data/elections_2018/bweb_2t_PI_301020181752.csv","data/elections_2018/bweb_2t_PR_301020181753.csv","data/elections_2018/bweb_2t_RJ_301020181753.csv","data/elections_2018/bweb_2t_RN_301020181754.csv","data/elections_2018/bweb_2t_RO_301020181754.csv","data/elections_2018/bweb_2t_RR_301020181755.csv","data/elections_2018/bweb_2t_RS_301020181755.csv","data/elections_2018/bweb_2t_SC_301020181756.csv","data/elections_2018/bweb_2t_SE_301020181756.csv","data/elections_2018/bweb_2t_SP_301020181756.csv","data/elections_2018/bweb_2t_TO_301020181757.csv","data/elections_2018/bweb_2t_ZZ_301020181758.csv","data/elections_2018/leiame-boletimurnaweb.pdf","images/stackoverflow_answer.png","images/stackoverflow_question.png","images/tse_election_data.png","web-scraping-brazils-presidential-election-data_files/anchor-4.2.2/anchor.min.js","web-scraping-brazils-presidential-election-data_files/bowser-1.9.3/bowser.min.js","web-scraping-brazils-presidential-election-data_files/distill-2.2.21/template.v2.js","web-scraping-brazils-presidential-election-data_files/jquery-1.11.3/jquery.min.js","web-scraping-brazils-presidential-election-data_files/popper-2.6.0/popper.min.js","web-scraping-brazils-presidential-election-data_files/tippy-6.2.7/tippy-bundle.umd.min.js","web-scraping-brazils-presidential-election-data_files/tippy-6.2.7/tippy.css","web-scraping-brazils-presidential-election-data_files/tippy-6.2.7/tippy-light-border.css","web-scraping-brazils-presidential-election-data_files/tippy-6.2.7/tippy.umd.min.js","web-scraping-brazils-presidential-election-data_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1477,8 +1477,94 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </div>
 
 <div class="d-article">
-<p>Distill is a publication format for scientific and technical writing, native to the web.</p>
-<p>Learn more about using Distill at <a href="https://rstudio.github.io/distill" class="uri">https://rstudio.github.io/distill</a>.</p>
+<h2 id="motivation" class="unnumbered">Motivation</h2>
+<p>I won’t lie to you. The very first time I downloaded elections data from the <a href="https://www.tse.jus.br/eleicoes/eleicoes-2018/votacao-e-resultados/boltim_urna_2_turno">Tribunal Superior Eleitoral TSE</a> was manually … and painful.</p>
+<p>28 zip files to download and unzip … MANUALLY!</p>
+<p>But it was also clear to me that this procedure wasn’t the most recommended. I should figure out a better way to do that.</p>
+<p>Thus, looking for a simple way to solve this problem I found this question on <a href="https://stackoverflow.com/questions/31517121/using-r-to-scrape-the-link-address-of-a-downloadable-file-from-a-web-page">stackoverflow</a>:</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="images/stackoverflow_question.png" width="80%" style="display: block; margin: auto;" /></p>
+</div>
+<p>And Hadley answered it with class.</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="images/stackoverflow_answer.png" width="80%" style="display: block; margin: auto;" /></p>
+</div>
+<p>With this valuable info, I needed to:</p>
+<ol type="1">
+<li>Find the downloadable link as per the question;</li>
+<li>Apply&amp;Adapt Hadley’s solution using <em>rvest</em> package.</li>
+</ol>
+<h1 id="view-page-source">View page source</h1>
+<p>In order to find the downloadable link, see the gif below or check this <a href="https://www.youtube.com/watch?v=TcWhMbY9d88&amp;feature=youtu.be">youtube video</a> as the quality is better. The tip is to look for the downloadable link right clicking on the <em>View page source</em> button.</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="https://media.giphy.com/media/AT01UNuTbZs8UCVP4j/giphy.gif" width="140%" style="display: block; margin: auto;" /></p>
+</div>
+<h1 id="r-code">R code</h1>
+<p>The R packages used are:</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://rvest.tidyverse.org/'>rvest</a></span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://purrr.tidyverse.org'>purrr</a></span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tibble.tidyverse.org/'>tibble</a></span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://r-datatable.com'>data.table</a></span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://stringr.tidyverse.org'>stringr</a></span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<h2 id="web-scraping">Web scraping</h2>
+<p>The R code below is pretty much what Hadley had posted. I have just adapted it to my problem. Then the object <em>page</em> receives the html file we saw in the video above. The function <em>read_html()</em> from package <em>xml2</em> just reads the html. After that we apply <em>html_nodes()</em> to find the links, <em>html_attr()</em> to get the url and <em>str_subset()</em> to find the files ending in .zip and excluding the ones ending in .sha.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>page</span> <span class='op'>&lt;-</span> <span class='fu'>xml2</span><span class='fu'>::</span><span class='fu'><a href='http://xml2.r-lib.org/reference/read_xml.html'>read_html</a></span><span class='op'>(</span><span class='st'>"https://www.tse.jus.br/hotsites/pesquisas-eleitorais/resultados_anos/boletim_urna/2018/boletim_urna_2_turno.html"</span><span class='op'>)</span>
+
+<span class='va'>zip_files</span> <span class='op'>&lt;-</span> <span class='va'>page</span> <span class='op'>%&gt;%</span>
+  <span class='fu'><a href='https://rvest.tidyverse.org/reference/html_nodes.html'>html_nodes</a></span><span class='op'>(</span><span class='st'>"a"</span><span class='op'>)</span> <span class='op'>%&gt;%</span>       <span class='co'># find all links</span>
+  <span class='fu'><a href='https://rvest.tidyverse.org/reference/html_text.html'>html_attr</a></span><span class='op'>(</span><span class='st'>"href"</span><span class='op'>)</span> <span class='op'>%&gt;%</span>     <span class='co'># get the url</span>
+  <span class='fu'><a href='https://stringr.tidyverse.org/reference/str_subset.html'>str_subset</a></span><span class='op'>(</span><span class='st'>"\\.zip"</span><span class='op'>)</span> <span class='op'>%&gt;%</span> <span class='co'># find those that end in .zip</span>
+  <span class='fu'><a href='https://stringr.tidyverse.org/reference/str_subset.html'>str_subset</a></span><span class='op'>(</span><span class='st'>"\\.sha"</span>, negate <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span> <span class='co'># rid of the ones ending in .sha</span>
+</code></pre>
+</div>
+</div>
+<p>Once you have run this code above, you download those files, unzip and save them in your machine.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'>for</span><span class='op'>(</span><span class='va'>i</span> <span class='kw'>in</span> <span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq_along</a></span><span class='op'>(</span><span class='va'>zip_files</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>{</span>
+  
+  <span class='va'>temp</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempfile</a></span><span class='op'>(</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/utils/download.file.html'>download.file</a></span><span class='op'>(</span><span class='va'>zip_files</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span>, <span class='va'>temp</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/utils/unzip.html'>unzip</a></span><span class='op'>(</span><span class='va'>temp</span>, exdir <span class='op'>=</span> <span class='st'>"data/elections_2018"</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/unlink.html'>unlink</a></span><span class='op'>(</span><span class='va'>temp</span><span class='op'>)</span>
+  
+<span class='op'>}</span>
+</code></pre>
+</div>
+</div>
+<h2 id="read-in-data">Read in data</h2>
+<p>As we are lazy (or should I say smart enough), let’s list all data at once with the function <code>list.files()</code></p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>csvs_to_read</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.files.html'>list.files</a></span><span class='op'>(</span>
+  path <span class='op'>=</span> <span class='st'>"data/elections_2018"</span>,  
+  pattern <span class='op'>=</span> <span class='st'>".*(bweb_2t).*csv$"</span>, 
+  recursive <span class='op'>=</span> <span class='cn'>TRUE</span>,          
+  full.names <span class='op'>=</span> <span class='cn'>TRUE</span>         
+<span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<p>That done, you can use the fantastic R function <em>map_df()</em> from <em>purrr</em> coupled with <em>fread()</em> from <em>data.table</em>.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>elections_2nd_round</span> <span class='op'>&lt;-</span> 
+  <span class='va'>csvs_to_read</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'><a href='https://purrr.tidyverse.org/reference/map.html'>map_df</a></span><span class='op'>(</span><span class='op'>~</span><span class='fu'><a href='https://Rdatatable.gitlab.io/data.table/reference/fread.html'>fread</a></span><span class='op'>(</span><span class='va'>.</span>, colClasses <span class='op'>=</span> <span class='st'>'character'</span>, showProgress <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'><a href='https://tibble.tidyverse.org/reference/as_tibble.html'>as_tibble</a></span><span class='op'>(</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<p>In a few seconds you get your data (nearly 3 million rows and 1,3GB) ready to be analysed.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>That’s all folks. Pretty simple to web scraping Brazil’s Presidential Election data.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
