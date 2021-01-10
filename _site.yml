@@ -7,8 +7,8 @@ navbar:
   right:
     - text: "Home"
       href: index.html
-    - text: "About"
-      href: about.html
     - text: "Blog"      # add
       href: blog.html   # add
+    - text: "Miscellaneous"
+      href: miscellaneous.html
 output: distill::distill_article

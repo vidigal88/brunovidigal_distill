@@ -1,0 +1,10 @@
+---
+title: "Miscellaneous"
+description: |
+  This page is dedicated to personal experiences, travels, culture ...
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
