@@ -2,7 +2,8 @@ name: "brunovidigal"
 title: "Bruno Vidigal"
 description: |
   Bruno Vidigal
-output_dir: "docs"
+  base_url: https://www.brunovidigal.com
+output_dir: "_site"
 navbar:
   right:
     - text: "Home"
