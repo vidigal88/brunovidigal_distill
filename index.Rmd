@@ -9,7 +9,7 @@ links:
   - label: GitHub
     url: "https://github.com/vidigal88"
   - label: Email
-    url: "caetano.vidigal@email.com"
+    mailto: "caetano.vidigal@email.com"
 site: distill::distill_website
 output:
   postcards::trestles
