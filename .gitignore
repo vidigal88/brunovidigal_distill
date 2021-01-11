@@ -44,4 +44,8 @@ vignettes/*.pdf
 # rds files
 .*rds
 
+# xlsx files
+.*xlsx
+
+
 
