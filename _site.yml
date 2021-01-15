@@ -2,7 +2,7 @@ name: "brunovidigal"
 title: "Bruno Vidigal"
 description: |
   Bruno Vidigal
-  base_url: https://www.brunovidigal.com
+base_url: https://www.brunovidigal.com
 output_dir: "_site"
 navbar:
   right:
@@ -13,3 +13,7 @@ navbar:
     - text: "Miscellaneous"
       href: miscellaneous.html
 output: distill::distill_article
+collections:
+  posts:
+    disqus: brunovidigal
+    share: [twitter, linkedin]

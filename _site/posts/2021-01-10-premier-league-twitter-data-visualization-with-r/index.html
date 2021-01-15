@@ -90,6 +90,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 <meta property="description" itemprop="description" content="From tweets to data visualization in R."/>
 
+<link rel="canonical" href="https://www.brunovidigal.com/posts/2021-01-10-premier-league-twitter-data-visualization-with-r/"/>
 
 <!--  https://schema.org/Article -->
 <meta property="article:published" itemprop="datePublished" content="2020-10-26"/>
@@ -100,19 +101,33 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <meta property="og:title" content="Bruno Vidigal: Premier League: Twitter Data Visualization with R"/>
 <meta property="og:type" content="article"/>
 <meta property="og:description" content="From tweets to data visualization in R."/>
+<meta property="og:url" content="https://www.brunovidigal.com/posts/2021-01-10-premier-league-twitter-data-visualization-with-r/"/>
+<meta property="og:image" content="https://www.brunovidigal.com/posts/2021-01-10-premier-league-twitter-data-visualization-with-r/eveliv.png"/>
+<meta property="og:image:width" content="612"/>
+<meta property="og:image:height" content="240"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:site_name" content="Bruno Vidigal"/>
 
 <!--  https://dev.twitter.com/cards/types/summary -->
-<meta property="twitter:card" content="summary"/>
+<meta property="twitter:card" content="summary_large_image"/>
 <meta property="twitter:title" content="Bruno Vidigal: Premier League: Twitter Data Visualization with R"/>
 <meta property="twitter:description" content="From tweets to data visualization in R."/>
+<meta property="twitter:url" content="https://www.brunovidigal.com/posts/2021-01-10-premier-league-twitter-data-visualization-with-r/"/>
+<meta property="twitter:image" content="https://www.brunovidigal.com/posts/2021-01-10-premier-league-twitter-data-visualization-with-r/eveliv.png"/>
+<meta property="twitter:image:width" content="612"/>
+<meta property="twitter:image:height" content="240"/>
 
+<!--  https://scholar.google.com/intl/en/scholar/inclusion.html#indexing -->
+<meta name="citation_title" content="Bruno Vidigal: Premier League: Twitter Data Visualization with R"/>
+<meta name="citation_fulltext_html_url" content="https://www.brunovidigal.com/posts/2021-01-10-premier-league-twitter-data-visualization-with-r/"/>
+<meta name="citation_online_date" content="2020/10/26"/>
+<meta name="citation_publication_date" content="2020/10/26"/>
+<meta name="citation_author" content="Bruno Vidigal"/>
 <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","preview","output"]}},"value":[{"type":"character","attributes":{},"value":["Premier League: Twitter Data Visualization with R"]},{"type":"character","attributes":{},"value":["From tweets to data visualization in R."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Bruno Vidigal"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["www.brunovidigal.com"]}},"value":[{"type":"NULL"}]}]}]},{"type":"character","attributes":{},"value":["10-26-2020"]},{"type":"character","attributes":{},"value":["eveliv.png"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_depth","self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[3]},{"type":"logical","attributes":{},"value":[false]}]}]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","preview","output","citation_url","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Premier League: Twitter Data Visualization with R"]},{"type":"character","attributes":{},"value":["From tweets to data visualization in R."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Bruno Vidigal"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["www.brunovidigal.com"]}},"value":[{"type":"NULL"}]}]}]},{"type":"character","attributes":{},"value":["10-26-2020"]},{"type":"character","attributes":{},"value":["eveliv.png"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_depth","self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[3]},{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["https://www.brunovidigal.com/posts/2021-01-10-premier-league-twitter-data-visualization-with-r/"]},{"type":"character","attributes":{},"value":["https://www.brunovidigal.com/posts/2021-01-10-premier-league-twitter-data-visualization-with-r/"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -2287,6 +2302,38 @@ document.addEventListener('DOMContentLoaded', function() {
 <p>As one can easily see, the spikes in the time series are explained by the main events of the match. Moreover, people on Twitter was reacting as the match was evolving and goals happening. But not only with the goals, for instance, when the Liverpool player Virgil van Dijk got injured and had to be replaced, the tweets went up immediately. The peak of the tweets happened in the end of the match when Liverpool scored a goal but VAR detected offside. It could have been the goal of the win for the Reds, but after some moment of euphoric, the goal was denied and the referee blew the final whistle.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
+<div class="article-footer">
+  <p class="social_footer">
+    <span class="disqus-comments">
+      <i class="fas fa-comments"></i>
+      &nbsp;
+      <span class="disqus-comment-count" data-disqus-identifier="posts/2021-01-10-premier-league-twitter-data-visualization-with-r/">Comment on this article</span>
+    </span>
+    <span class="article-sharing">
+      Share: &nbsp;
+      <a href="https://twitter.com/share?text=Premier%20League%3A%20Twitter%20Data%20Visualization%20with%20R&amp;url=https%3A%2F%2Fwww.brunovidigal.com%2Fposts%2F2021-01-10-premier-league-twitter-data-visualization-with-r%2F">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fwww.brunovidigal.com%2Fposts%2F2021-01-10-premier-league-twitter-data-visualization-with-r%2F&amp;title=Premier%20League%3A%20Twitter%20Data%20Visualization%20with%20R">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </span>
+  </p>
+  <script id="dsq-count-scr" src="https://brunovidigal.disqus.com/count.js" async></script>
+  <div id="disqus_thread" class="hidden"></div>
+  <script type="text/javascript" cookie-consent="functionality">
+var disqus_config = function () {
+  this.page.url = 'https://www.brunovidigal.com/posts/2021-01-10-premier-league-twitter-data-visualization-with-r/';
+  this.page.identifier = 'posts/2021-01-10-premier-league-twitter-data-visualization-with-r/';
+};
+(function() {
+  var d = document, s = d.createElement('script');
+  s.src = 'https://brunovidigal.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+})();
+</script>
+</div>
 <!--/radix_placeholder_article_footer-->
 </div>
 
@@ -2297,7 +2344,18 @@ document.addEventListener('DOMContentLoaded', function() {
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->
 <!--radix_placeholder_appendices-->
-<div class="appendix-bottom"></div>
+<div class="appendix-bottom">
+  <h3 id="citation">Citation</h3>
+  <p>For attribution, please cite this work as</p>
+  <pre class="citation-appendix short">Vidigal (2020, Oct. 26). Bruno Vidigal: Premier League: Twitter Data Visualization with R. Retrieved from https://www.brunovidigal.com/posts/2021-01-10-premier-league-twitter-data-visualization-with-r/</pre>
+  <p>BibTeX citation</p>
+  <pre class="citation-appendix long">@misc{vidigal2020premier,
+  author = {Vidigal, Bruno},
+  title = {Bruno Vidigal: Premier League: Twitter Data Visualization with R},
+  url = {https://www.brunovidigal.com/posts/2021-01-10-premier-league-twitter-data-visualization-with-r/},
+  year = {2020}
+}</pre>
+</div>
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
 <!--/radix_placeholder_navigation_after_body-->
