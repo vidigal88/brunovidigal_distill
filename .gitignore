@@ -48,4 +48,13 @@ vignettes/*.pdf
 .*xlsx
 
 
+# other files
+.*cpg
+.*dbf
+.*prj
+.*sbn
+.*sbx
+.*shp
+.*shx
+.*zip
 
