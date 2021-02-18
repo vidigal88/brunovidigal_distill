@@ -7,15 +7,15 @@
     <description>Bruno Vidigal
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Wed, 17 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 18 Feb 2021 00:00:00 +0000</lastBuildDate>
     <item>
-      <title>&lt;&lt;Land doesn't vote, people do.&gt;&gt; - An application on 2018 Brazil's Presidential Election</title>
+      <title>&lt;&lt;Land doesn't vote, people do.&gt;&gt; - An Application on 2018 Brazil's Presidential Election</title>
       <dc:creator>Bruno Vidigal</dc:creator>
-      <link>https://www.brunovidigal.com/posts/2021-02-17-land-doesnt-vote-people-do-an-application-on-2018-brazils-presidential-election</link>
+      <link>https://www.brunovidigal.com/posts/2021-02-18-land-doesnt-vote-people-do-an-application-on-2018-brazils-presidential-election</link>
       <description>This post aims to create nice maps from the 2018 Brazil's Presidential Election.</description>
-      <guid>https://www.brunovidigal.com/posts/2021-02-17-land-doesnt-vote-people-do-an-application-on-2018-brazils-presidential-election</guid>
-      <pubDate>Wed, 17 Feb 2021 00:00:00 +0000</pubDate>
-      <media:content url="https://www.brunovidigal.com/posts/2021-02-17-land-doesnt-vote-people-do-an-application-on-2018-brazils-presidential-election/brazil.png" medium="image" type="image/png" width="613" height="527"/>
+      <guid>https://www.brunovidigal.com/posts/2021-02-18-land-doesnt-vote-people-do-an-application-on-2018-brazils-presidential-election</guid>
+      <pubDate>Thu, 18 Feb 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://www.brunovidigal.com/posts/2021-02-18-land-doesnt-vote-people-do-an-application-on-2018-brazils-presidential-election/brazil.png" medium="image" type="image/png" width="843" height="744"/>
     </item>
     <item>
       <title>Web Scraping Brazil's Presidential Election Data</title>
